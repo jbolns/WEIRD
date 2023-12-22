@@ -1,0 +1,14 @@
+WEIRD
+Copyright (c) 2023 Jose A Bolanos / Polyzentrik Tmi.
+
+The license does not cover any documents in the "_test-docs" folder. The author retains all rights for all documents in this folder. They are meant solely for testing WEIRD. Do not use, reproduce, or distribute the documents in this folder for any purpose other than testing WEIRD.
+
+This product includes a copy of bootstrap code and bootstrap icons, available under a MIT license.
+Copyright (c) 2011-2018 Twitter, Inc.
+Copyright (c) 2011-2018 The Bootstrap Authors.
+The full license is included in the folder ./external-licenses/bootstrap.
+
+This product includes a copy of jquery code, available under a MIT license.
+Copyright OpenJS Foundation and other contributors, https://openjsf.org/.
+The full license and a list of authors is included in the folder ./external-licenses/jquery.
+

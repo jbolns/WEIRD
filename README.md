@@ -67,7 +67,7 @@ Unfortunately, we haven't yet configured an assistant to facilitate hosting. You
 
 WEIRD produces static websites, though. Should be straightforward: save files to bucket or hosting service, done. 
 
-That said, please note WEIRD is configured to work at the root of a domain/localhost (e.g., example.com). Subdomains (e.g., weird.example.com) work just fine, or at least we think they do. We use a subdomain to host WEIRD's public website. There was no need for any massive configuration besides the standard DNS shenanigans needed to redirect traffic to a subdomain. However, to upload a WEIRD website to a folder of a domain (e.g. example.com/weird) you would need to re-write the main.js file to account for path differences. We tried. It wasn't worth the frustration.
+That said, please note WEIRD is configured to work at the root of a domain/localhost (e.g. example.com). Subdomains (e.g. weird.example.com) work, or at least we think they do (we use a subdomain to host WEIRD's public website). However, to upload a WEIRD website to a folder of a domain (e.g. example.com/weirdsite) you would need to re-write the main.js file to account for path differences. We tried. It wasn't worth it.
 
 ## HOW TO > Update an existing WEIRD website (low-code)
 The assistants in the previous sections re-write the settings and re-create the entire build. This is inconvenient if all you want is to update or add to the websites.

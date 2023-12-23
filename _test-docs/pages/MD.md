@@ -90,6 +90,6 @@ WEIRD can produce more sustainable websites that emit less carbon emissions than
 ## License
 WEIRD is a product by [polyzentrik.com](https://www.polyzentrik.com/), released under an Apache 2.0 open source license.
 
-We kindly ask you to leave the branding in the footer intact or [make a small voluntary payment via our payments gateway](https://www.polyzentrik.com/gateway/) if you wish to remove it.
+We kindly ask you to leave the branding in the footer intact or [make a small voluntary payment via our main website](https://www.polyzentrik.com/help-us-help/) if you wish to remove it.
 
 

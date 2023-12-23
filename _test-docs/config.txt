@@ -4,5 +4,5 @@ type: website
 author: Dr J
 keywords: WEIRD, Python, JavaScript, Web Framework, Website Development
 title: WEIRD<span class='blink'>_</span>
-intro: WEIRD's weird, but it can produce fairly nice websites from different types of documents (even Word documents).
+intro: WEIRD's a little weird, but it can produce pretty nice websites from little more than just documents (even Word documents).
 blog: yes

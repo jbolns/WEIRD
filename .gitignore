@@ -1,14 +1,10 @@
 # IGNORE ANY LOCAL BUILD (AVOID LOCAL TESTS MAKING IT THROUGH)
-index.html
-components/
-pages/
-blog/
-images/
-utils/
-
-# IGNORE ANY FILES IN DEV PAGES AND BLOG (AVOID LOCAL TESTS MAKING IT THROUGH) BUT PASS THE FOLDERS
-weird/pages/
-weird/blog/
+./index.html
+./components/
+./pages/
+./blog/
+./images/
+./utils/
 
 # IGNORE NON-CORE IMAGES BUT PASS THE FOLDERS
 weird/images/blog/*
@@ -19,13 +15,3 @@ weird/python/__pycache__
 weird/utils/fonts/geologica-v1-latin-300.woff2
 weird/utils/fonts/geologica-v1-latin-600.woff2
 weird/utils/fonts/geologica-v1-latin-900.woff2
-
-# TEMP EXCLUSIONS
-_external-licenses/
-_test-docs/
-weird/
-add.py
-build.py
-config.py
-reset.py
-server.py

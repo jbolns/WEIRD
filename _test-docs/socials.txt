@@ -1,0 +1,2 @@
+linkedin: https://www.linkedin.com/company/polyzentrik/
+github: https://github.com/jbolns/WEIRD

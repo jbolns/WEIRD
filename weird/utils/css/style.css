@@ -1,0 +1,379 @@
+/***************** FONT SHENANIGANS *****************/
+/**/
+
+@font-face {
+  font-display: swap;
+  font-family: 'Geologica';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/geologica-v1-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Geologica';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/geologica-v1-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Geologica';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/geologica-v1-latin-900.woff2') format('woff2');
+}
+
+/***************** GENERAL PAGE ELEMENTS *****************/
+/**/
+
+html,
+header,
+footer {
+  font-family: monospace, sans-serif;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  font-family: 'Geologica';
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h1,
+h2 {
+  font-variant: small-caps;
+}
+
+header ul,
+header li,
+footer ul,
+footer li {
+  font-family: monospace, sans-serif;
+  display: inline;
+  margin-left: none;
+  margin-right: 7px;
+  padding: 0;
+}
+
+/**/
+/***************** HEADER  *****************/
+header {
+  width: 100%;
+  background: black;
+  color: aliceblue;
+  border-bottom: 1px solid mediumaquamarine;
+}
+
+header nav {
+  background: #f2f3fb;
+  display: flow-root;
+  border-bottom: 1px dotted mediumaquamarine;
+  letter-spacing: -1px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 7px;
+}
+
+header a:hover {
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+
+header .toplinks,
+header .socials {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+header .toplinks {
+  float: left;
+}
+
+header .socials {
+  float: right;
+}
+
+header .socials a:hover {
+  color: black;
+  background: mediumaquamarine;
+}
+
+.socials img {
+  width: 21px;
+}
+
+header .branding {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+
+.branding .sitename {
+  font-size: xx-large;
+}
+
+.branding .sitelogo {
+  text-align: center;
+}
+
+.branding .blink {
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+/**/
+/***************** FOOTER  *****************/
+footer {
+  display: flow-root;
+  line-height: 2em;
+  font-size: 0.7em;
+  background: #000;
+  color: white;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: yellow;
+  text-transform: uppercase;
+}
+
+footer div {
+  display: inline-block;
+  margin: auto 7px;
+}
+
+footer p,
+footer ul {
+  margin: 0;
+}
+
+footer nav {
+  float: left;
+}
+
+
+/**/
+/***************** MAIN BODY  *****************/
+main,
+#wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+section,
+section.docm,
+div.docm {
+  margin: 20vh auto;
+  padding: 20vh 20%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 5rem 0 5rem rgb(0 0 0 / 30%);
+}
+
+.docm hr {
+  display: none;
+}
+
+div.wordm {
+  border-bottom: 1px dotted black;
+  padding: 20vh 0;
+}
+
+section:nth-child(even),
+.docm {
+  background: #d7fff3;
+}
+
+.flexie {
+  display: flex;
+  gap: 4%;
+  flex-direction: column;
+}
+
+.flexie-v-align {
+  display: flex;
+  gap: 4%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fwrap {
+  flex-wrap: wrap;
+}
+
+.group {
+  flex-basis: 100%;
+}
+
+.half {
+  flex-basis: 48%;
+}
+
+#catbar,
+#blogwrap,
+#loadBlogs {
+  width: 80%;
+  margin: 14px auto;
+}
+
+#blogwrap section {
+  margin: 14px 0;
+  padding: 2vh;
+  border: 1px solid #aaa;
+  box-shadow: none;
+}
+
+.invisible {
+  display: none;
+}
+
+#catbar button {
+  padding: 14px 21px;
+  margin: 3px;
+  text-transform: capitalize;
+}
+
+#catbar button:hover {
+  background: yellow;
+}
+
+#loadBlogs {
+  text-align: center;
+}
+
+#loadBlogs button {
+  background: #e51470;
+  font-size: x-large;
+  box-shadow: 7px 7px 7px black;
+  transform: skewX(-5deg);
+}
+
+#loadBlogs button:hover {
+  background: yellow;
+  box-shadow: 7px 3px 0 black;
+}
+
+/***************** MINOR FORMATS *****************/
+.reset {
+  clear: both;
+}
+
+.left {
+  float: left;
+  text-align: left;
+}
+
+.right {
+  float: right !important;
+  text-align: right;
+}
+
+.centry {
+  margin: auto;
+  text-align: center;
+}
+
+.purple {
+  color: #e51470;
+}
+
+.highlight {
+  background: #ffd70a;
+  padding: 3px;
+  border: 1px dotted black;
+}
+
+.special {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.fab {
+  vertical-align: middle;
+}
+
+.open {
+  display: inline-block;
+  padding: 0 15px;
+  color: white
+}
+
+.wide,
+.close {
+  display: none;
+  width: 100vw;
+  color: white
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+.docm td {
+  display: block;
+}
+
+/** RESPONSIVE DESIGN **/
+@media all and (min-width: 768px) {
+  #blogwrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .docm td {
+    display: table-cell;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  nav {
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .flexie,
+  .flexie-v-align {
+    flex-direction: row;
+  }
+
+  .open,
+  .close {
+    display: none;
+  }
+
+  .wide {
+    display: inline-block;
+    width: inherit;
+  }
+}

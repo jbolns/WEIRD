@@ -1,0 +1,8 @@
+sitename: WEIRD
+description: A Python-meets-JS multi-modal web framework
+type: website
+author: Dr J
+keywords: WEIRD, Python, JavaScript, Web Framework, Website Development
+title: WEIRD<span class='blink'>_</span>
+intro: WEIRD's weird, but it can produce fairly nice websites from different types of documents (even Word documents).
+blog: yes

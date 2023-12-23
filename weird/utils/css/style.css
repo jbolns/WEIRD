@@ -205,6 +205,11 @@ div.docm {
   display: none;
 }
 
+.docm img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 div.wordm {
   border-bottom: 1px dotted black;
   padding: 20vh 0;
@@ -353,6 +358,16 @@ figcaption {
 
   .docm td {
     display: table-cell;
+  }
+
+  .docm img {
+    max-width: none !important;
+    height: auto !important;
+  }
+
+  .docm table img {
+    max-width: 30vw !important;
+    height: auto !important;
   }
 }
 

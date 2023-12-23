@@ -27,6 +27,7 @@ But it can produce surprisingly good and fairly sustainable websites from little
   * Do NOT use the word *"blog"* in document names.
   * Currently supported formats: .html, .md, .docx, .docm.
 * Images for the **logo** (300x300px), **emoticon** (75x75px), and **social media** (1200x630px).
+* If you're using .docm Word documents, programmatic access to macros (hint. it's in the trust centre).
 
 ## HOW TO > Set up a new WEIRD website (low-code)
 Open WEIRD's folder and launch a terminal. Then...

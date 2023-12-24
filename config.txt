@@ -1,0 +1,8 @@
+sitename: Name
+description: Description
+type: website
+author: J
+keywords: k1, k2, k3
+title: Title
+intro: Intro sentence
+blog: no

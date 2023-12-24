@@ -58,7 +58,7 @@ def main():
   # Info needed for blog functionality
   print("\n\n=> REQUIRED STEP 3/4. Information needed for blog functionality.\n")
   CONFIGS = blog(CONFIGS)
-
+  print(CONFIGS)
   # Write info to config file
   write(root + '/config.txt', CONFIGS)
 
@@ -97,6 +97,8 @@ def main():
   if ok =='yes':
     SOCIALS = channels()
     write(root + '/socials.txt', SOCIALS)
+  else:
+    write(root + '/socials.txt', {})
 
   # Top-level pages
   print("\n\n=> OPTIONAL STEP 2/3. PAGES.")

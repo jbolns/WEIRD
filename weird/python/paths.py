@@ -34,36 +34,51 @@ def reset_dirs(path, mode):
   ''' Function resets directories to WEIRD's original settings (mode = 'full') or deletes any pre-existing build (mode = 'partial')
   '''
 
+  from weird.python.assistant import write
+
+  # Save paths
+  root = path
+  dev = path + '/weird/'
+
   # Get rid of any extra folders or files at the top-level
-  WEIRD = ['_test-docs', '_external-licenses', 'weird', '.gitignore', 'add.py', 'build.py', 'config.py', 'reset.py', 'server.py', 'LICENSE', 'NOTICE', 'README.md']
+  WEIRD = ['.git', '_test-docs', '_external-licenses', 'weird', '.gitignore', 'add.py', 'build.py', 'config.py', 'reset.py', 'server.py', 'LICENSE', 'NOTICE', 'README.md']
   if mode == "partial":
     WEIRD = WEIRD + ['index.html', 'config.txt', 'socials.txt']
   try:
-    for item in os.listdir(path):
+    kill_list = [i for i in os.listdir(root) if i not in WEIRD]
+    for item in kill_list:
       if item not in WEIRD:
-        if os.path.isfile(path + '/' + item):
-          os.remove(path + '/' + item)
-        if os.path.isdir(path + '/' + item):
-          shutil.rmtree(path + '/' + item)
+        if os.path.isfile(root + '/' + item):
+          try:
+            os.remove(root + '/' + item)
+          except Exception as e:
+            print('Failed to delete file ', root + '/' + item, '. Try deleting manually')
+            print('Error is: ', e)
+        if os.path.isdir(root + '/' + item):
+          try:
+            shutil.rmtree(root + '/' + item)
+          except Exception as e:
+            print('Failed to delete directory: ', item, '. Try deleting manually')
+            print('Error is: ', e)
+          
   except:
-    print('Failed to perform some deletions needed to reset WEIRD to original settings. WEIRD might still work, but the best would be to check the folder/file structure manually.')
+    print('Failed to perform some deletions needed to reset the existing build. WEIRD might still work, but the best would be to check the folder/file structure manually.')
 
   # Adjust deletions according to reset mode
   if mode == "full": 
     # Get rid of any extra folders or files at the top-level of the DEV folder
-    path = path + '/weird/'
     WEIRD = ['alpha', 'images', 'python', 'utils']
     try:
-      for item in os.listdir(path):
+      for item in os.listdir(dev):
         if item not in WEIRD:
-          if os.path.isfile(path + '/' + item):
-            os.remove(path + '/' + item)
-          if os.path.isdir(path + '/' + item):
-            shutil.rmtree(path + '/' + item)
+          if os.path.isfile(dev + '/' + item):
+            os.remove(dev + '/' + item)
+          if os.path.isdir(dev + '/' + item):
+            shutil.rmtree(dev + '/' + item)
     except:
       print('Failed to perform some deletions needed to reset WEIRD to original settings. WEIRD might still work, but the best would be to check the folder/file structure manually.')
     # Get rid of any extra folders or files in the image folder
-    path = path + '/images/'
+    path = dev + '/images/'
     WEIRD = ['socials', 'list.webp', 'x-square-fill.webp']
     try:
       for item in os.listdir(path):
@@ -74,20 +89,25 @@ def reset_dirs(path, mode):
             shutil.rmtree(path + '/' + item)
     except:
       print('Failed to perform some deletions needed to reset WEIRD to original settings. WEIRD might still work, but the best would be to check the folder/file structure manually.')
+    
+    # Write dummy configs and socials
+    CONFIGS = {'sitename': 'Name', 'description': 'Description', 'type': 'website', 'author': 'J', 'keywords': 'k1, k2, k3', 'title': 'Title', 'intro': 'Intro sentence', 'blog': 'no'}
+    write(root + '/config.txt', CONFIGS)
+    write(root + '/socials.txt', {})
   
   else: # Deletes DEV files generated during build without deleting DEV folders themselves.
     blog_images_folder = '/weird/images/blog/'
     pages_images_folder = '/weird/images/pages/'
-    for item in os.listdir(path + blog_images_folder):
-      if os.path.isdir(path + blog_images_folder + '/' + item):
+    for item in os.listdir(root + blog_images_folder):
+      if os.path.isdir(root + blog_images_folder + '/' + item):
         try:
-          shutil.rmtree(path + blog_images_folder + '/' + item)
+          shutil.rmtree(root + blog_images_folder + '/' + item)
         except:
           print('Failed to perform some deletions needed to fully delete any pre-existing build. WEIRD might still work, but the best would be to check the image folders manually.')
-    for item in os.listdir(path + pages_images_folder):
-      if os.path.isdir(path + pages_images_folder + '/' + item):
+    for item in os.listdir(root + pages_images_folder):
+      if os.path.isdir(root + pages_images_folder + '/' + item):
         try:
-          shutil.rmtree(path + pages_images_folder + '/' + item)
+          shutil.rmtree(root + pages_images_folder + '/' + item)
         except:
           print('Failed to perform some deletions needed to fully delete any pre-existing build. WEIRD might still work, but the best would be to check the image folders manually.')
 
